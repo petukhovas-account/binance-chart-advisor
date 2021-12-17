@@ -45,7 +45,7 @@ diff = n2ma - nma
 sqn = round(math.sqrt(ehma_period))
 n1 = ta.ema(diff, length = sqn)
 n1 = n1.replace(np.nan, 0)
-print(n1)
+#print(n1)
 
 #Расчёт маркеров сигнала buy
 signal_buy = []
