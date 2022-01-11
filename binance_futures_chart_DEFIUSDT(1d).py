@@ -24,7 +24,7 @@ root_url = 'https://fapi.binance.com/fapi/v1/klines'
 url = root_url + '?symbol=' + symbol + '&interval=' + interval + '&limit=' + str(limit)
 candles = requests.get(url)
 data = json.loads(candles.text)
-longshort = requests.get('https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=DEFIUSDT&period=1d&limit=30')
+longshort = requests.get('https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=' + symbol + '&period=1d&limit=30')
 longshort_data = json.loads(longshort.text)
 print(longshort_data[-2:])
 
